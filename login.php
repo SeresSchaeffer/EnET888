@@ -1,9 +1,9 @@
 <?php 
     session_start();
-    if(isset($_SESSION["User_ID"])){
-        header("location:http://localhost/work/BitMeta/index.php");
-        die();
-    }
+   // if(isset($_SESSION["User_ID"])){
+   //     header("location:http://localhost/work/SEEnEt888/index.php");
+    //  die();
+   // }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,12 +22,12 @@
     <!-- font awesome icon -->
     <script src="https://kit.fontawesome.com/f7b93d372f.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="login.css">
     <link rel="icon" href="image/icon_200x200.png" type="image/x-icon">
     <title>Enet888 Login</title>
 </head>
 <body>
-<script src="js/login.js"></script>
+<script src="login.js"></script>
 <br>
 <div class="container">
     <div class="frame">
@@ -41,7 +41,14 @@
             <form class="form-signin" action="" method="post" name="form"> <label for="username">Username</label><input class="form-styling" type="text" name="username" placeholder="" />  <label for="password">Password</label> <input class="form-styling" type="text" name="password" placeholder="" /> <input type="checkbox" id="checkbox" /> <label for="checkbox"><span class="ui"></span>Keep me signed in</label>
                 <div class="btn-animate"> <a class="btn-signin text-white">Login to your account</a> </div>
             </form>
-            <form class="form-signup" action="" method="post" name="form"> <label for="username">Username</label> <input class="form-styling" type="text" name="email" placeholder="" /><label for="ID_card">ID Card</label> <input class="form-styling" type="text" name="ID_card" placeholder="" /> <label for="password">Password</label> <input class="form-styling" type="text" name="confirmpassword" placeholder="" /> <a ng-click="checked = !checked" class="btn-signup">REGISTER</a> </form>
+            <form class="form-signup" action="" method="post" name="form"> 
+                <label for="username">Username</label> 
+                <input class="form-styling" type="text" name="username" placeholder="" />
+                <label for="email">Email</label> 
+                <input class="form-styling" type="text" name="email" placeholder="" /> 
+                <label for="password">Password</label> 
+                <input class="form-styling" type="text" name="confirmpassword" placeholder="" /> 
+                <a ng-click="checked = !checked" class="btn-signup">REGISTER</a> </form>
             <div class="success"> <svg width="270" height="270" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" id="check" ng-class="checked ? 'checked' : ''">
                     <path fill="#ffffff" d="M40.61,23.03L26.67,36.97L13.495,23.788c-1.146-1.147-1.359-2.936-0.504-4.314 c3.894-6.28,11.169-10.243,19.283-9.348c9.258,1.021,16.694,8.542,17.622,17.81c1.232,12.295-8.683,22.607-20.849,22.042 c-9.9-0.46-18.128-8.344-18.972-18.218c-0.292-3.416,0.276-6.673,1.51-9.578" />
             </div>
