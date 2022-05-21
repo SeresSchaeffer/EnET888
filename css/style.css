@@ -8,7 +8,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
-:root {
+ :root {
     --blue: #007bff;
     --indigo: #6610f2;
     --purple: #6f42c1;
@@ -354,7 +354,7 @@ progress {
     -webkit-appearance: none;
 }
 
-::-webkit-file-upload-button {
+ ::-webkit-file-upload-button {
     font: inherit;
     -webkit-appearance: button;
 }
@@ -9817,36 +9817,6 @@ a.text-dark:focus {
     font-weight: 600;
 }
 
-[class^=flaticon-]:before,
-[class*=" flaticon-"]:before,
-[class^=flaticon-]:after,
-[class*=" flaticon-"]:after {
-    font-size: inherit;
-    margin-left: 0;
-}
-
-.navbar-light .navbar-nav .nav-link {
-    padding: 20px 10px;
-    color: #1C1C1C;
-    outline: none;
-}
-
-.navbar-light .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .nav-link.active {
-    color: #D19C97;
-}
-
-@media (max-width: 991.98px) {
-    .navbar-light .navbar-nav .nav-link {
-        padding: 5px 0px;
-    }
-}
-
-.navbar-vertical.navbar-light .navbar-nav .nav-link {
-    padding: 8px 30px;
-    border-bottom: 1px solid #EDF1FF;
-}
-
 #header-carousel img {
     width: 100%;
     height: 100%;
@@ -9872,7 +9842,7 @@ a.text-dark:focus {
 
 .section-title span {
     position: relative;
-    background: #ffffff;
+    background: #FFEFD5;
     z-index: 1;
 }
 
@@ -9887,39 +9857,16 @@ a.text-dark:focus {
     background: #1C1C1C;
 }
 
-.offer img {
-    position: absolute;
-    max-width: 50%;
-    max-height: 90%;
-    bottom: 0;
-}
-
-.offer .text-md-right img {
-    left: 0;
-}
-
-.offer .text-md-left img {
-    right: 0;
-}
-
-.cat-item .cat-img img,
 .product-item .product-img img {
     transition: .5s;
 }
 
-.cat-item:hover .cat-img img,
 .product-item:hover .product-img img {
     transform: scale(1.2);
 }
 
 .product-item .btn:hover {
     color: #D19C97 !important;
-}
-
-.contact-form .help-block ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
 }
 
 .back-to-top {
@@ -9938,4 +9885,39 @@ a.text-dark:focus {
     100% {
         transform: translateY(-15px);
     }
+}
+
+.small-img img {
+    height: 100px;
+    margin: 10px 0;
+    cursor: pointer;
+    display: block;
+    opacity: .6;
+}
+
+.small-img img:hover {
+    opacity: 1;
+}
+
+.small-img {
+    margin-top: 100px;
+    padding-left: 35px;
+    float: left;
+}
+
+.img-center {
+    position: relative;
+    cursor: pointer;
+    margin: auto;
+}
+
+.index-img img {
+    width: 300px;
+    height: 300px;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
