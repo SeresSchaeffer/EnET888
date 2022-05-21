@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2022 at 09:37 PM
+-- Generation Time: May 21, 2022 at 05:31 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.4.20
 
@@ -34,15 +34,18 @@ CREATE TABLE `user` (
   `email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `ID_card` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `address` text COLLATE utf8_unicode_ci NOT NULL,
-  `tel` varchar(50) COLLATE utf8_unicode_ci NOT NULL
+  `tel` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `Icon` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`username`, `password`, `name`, `email`, `ID_card`, `address`, `tel`) VALUES
-('admin', '1234', 'admin', 'jaaaaa', '1234567891234', 'ไม่บอกหรอก', '0966696247');
+INSERT INTO `user` (`username`, `password`, `name`, `email`, `ID_card`, `address`, `tel`, `Icon`) VALUES
+('admin', '1234', 'admin', 'jaaaaa', '1234567891234', 'ไม่บอกหรอก', '0966696247', ''),
+('flxke', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', '', 'fluke.danaipong@gmail.com', '', '', '', ''),
+('new', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', '', 'new@gmail.com', '', '', '', '');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
