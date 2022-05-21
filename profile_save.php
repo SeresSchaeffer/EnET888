@@ -10,10 +10,9 @@ $surname=$_POST['surname'];
 $phone=$_POST['phone'];
 $address=$_POST['address'];
 $ID_card_number=$_POST['ID_card_number'];
-$job=$_POST['job'];
 $email=$_POST['email'];
 
-$targetDir = "image/Icon/";
+$targetDir = "img/";
 $fileName = basename($_FILES["icon"]["name"]);
 $targetFilePath = $targetDir . $fileName;
 $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
@@ -22,17 +21,16 @@ $allowTypes = array('jpg','png','jpeg','gif','pdf');
 $bank = $_POST['bank'];
 $bank_number = $_POST['bank_number'];
 
-$conn = new PDO("mysql:host=localhost; dbname=bitmeta; charset=utf8","root","");
+$conn = new PDO("mysql:host=localhost; dbname=enet888; charset=utf8","root","");
 $sql1 = "SELECT * FROM user WHERE User_ID='$_SESSION[User_ID]'";
 $result=$conn->query($sql1);
 $row = $result->fetch();
-if($name=="")$name = $row['Name'];
-if($surname=="")$surname = $row['Surname'];
-if($phone=="")$phone = $row['phone'];
-if($address=="")$address = $row['Address'];
-if($ID_card_number=="")$ID_card_number = $row['ID_card_number'];
-if($job=="")$job = $row['Job'];
-if($email=="")$email = $row['Email'];
+if($name=="")$name = $row['name'];
+if($surname=="")$surname = $row['surname'];
+if($phone=="")$phone = $row['tel'];
+if($address=="")$address = $row['address'];
+if($ID_card_number=="")$ID_card_number = $row['ID_card'];
+if($email=="")$email = $row['email'];
 if($fileName=="")$fileName = $row['Icon'];
 
 if(in_array($fileType, $allowTypes) && $fileName!=""){
@@ -42,8 +40,8 @@ if(in_array($fileType, $allowTypes) && $fileName!=""){
     }
 }
 
-$sql="UPDATE user SET Name='$name',Surname='$surname',phone='$phone',Address='$address',
-      ID_card_number='$ID_card_number',Job='$job',Email='$email' 
+$sql="UPDATE user SET name='$name',surname='$surname',tel='$phone',address='$address',
+      ID_card='$ID_card_number',email='$email' 
       WHERE User_ID='$_SESSION[User_ID]'";
 $conn->exec($sql);
 
@@ -69,7 +67,7 @@ $_SESSION["save_profile"]="success";
 
 $conn=null;
 
-header("location:profile_main.php");
+header("location:profile.php");
 die();
 
 ?>
