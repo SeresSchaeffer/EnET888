@@ -50,10 +50,10 @@ session_start();
 </head>
 <body>
 <?php include "nav.php"; ?>
-<center><h1>Order</h1></center>
+
 <?php 
     if($_SESSION["role"]=="a"){
-?>
+?><center><h1>Order</h1></center>
         <div class="container">
         <table class="table table-striped" style="text-align:center; vertical-align:center; height:100px;">
           

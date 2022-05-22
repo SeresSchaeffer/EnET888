@@ -43,6 +43,9 @@ session_start();
 					},
                     success: function(data) {
 						console.log(data);
+                        location.reload();
+                        alert("Add to cart Success !");
+                        
 					}
 				});
 				
@@ -102,7 +105,7 @@ session_start();
                             </button>
                         </div>
                         
-                        <input type="number" min="1" class="form-control bg-secondary text-center input" value="1" name="quantity" id="quantity">
+                        <input type="number" min="1"  class="form-control bg-secondary text-center input" value="1" name="quantity" id="quantity">
                         
                         <div class="input-group-btn">
                             <button class="btn btn-primary btn-plus">
@@ -113,9 +116,12 @@ session_start();
                   
                <button class="btn btn-primary px-3" name="item_id" value="1" type="submit" id="item_id"><i class="fa fa-shopping-cart mr-1"></i> Add To Cart</button>
                 <?php }else if($_SESSION["role"]=="a"){?>  
+                    <p>สินค้าคงเหลือ <?php echo $row["instock"]; ?> กล่อง </p>
                 <a href="edit_price.php?id=1"><button class="btn btn-primary px-3" type="submit" >Edit</button></a>
                 <?php } ?>
                 </div>
+                <?php if($_SESSION["role"]=="m"){?>
+                <p>สินค้าคงเหลือ <?php echo $row["instock"]; ?> กล่อง </p>
                 
                 <div class="d-flex pt-2">
                     <p class="text-dark font-weight-medium mb-0 mr-2">Share on:</p>
@@ -130,7 +136,7 @@ session_start();
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
-                </div>
+                </div> <?php } ?>
             </div>
         </div>
     </div>

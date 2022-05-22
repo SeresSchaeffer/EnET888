@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- bootstrap -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <!-- JQuery -->
@@ -26,6 +27,19 @@
     <link rel="icon" href="image/icon_200x200.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <title>Enet888 Login</title>
+    <script>
+        $('i').click(function (){
+            if($('#password').attr('type') == 'password'){
+                $('#password').attr('type','text');
+                $(this).removeClass('fa-eye-slash');
+                $(this).addClass('fa-eye');
+            } else {
+                $('#password').attr('type','password');
+                $(this).removeClass('fa-eye');
+                $(this).addClass('fa-eye-slash');
+            }       
+        });
+    </script>
 </head>
 <body>
 <?php include 'nav.php'; ?>
@@ -44,12 +58,13 @@
             <form class="form-signin" action="login_verify.php" method="post" name="form"> 
                 <label for="username">Username</label>
                 <input class="form-styling" type="text" name="username" placeholder="" /> 
+                
                 <label for="password">Password</label>
-                <input class="form-styling" type="text" name="password" placeholder="" />
-
-                <input type="checkbox" id="checkbox" /> 
-                <label for="checkbox"><span class="ui"></span>Keep me signed in</label>
-                <button type="submit" class="form-control button-form mt-4" style="background-color:#A06300; border-color:#212042; color:white ">Sign In</button>
+                <input class="form-styling" type="password" name="password" id="password" placeholder="" />
+                
+                
+                
+                <button type="submit" class="form-control button-form mt-4" style="background-color:#ffdda8; border-color:#000;border-radius:10px; color:#a06300 ">Sign In</button>
                <!-- <div class="btn-animate"> <a class="btn-signin text-white">Login to your account</a> </div> -->
             </form>
 
@@ -58,10 +73,11 @@
                 <input class="form-styling" type="text" name="username" placeholder="" />
                 <label for="email">Email</label> 
                 <input class="form-styling" type="text" name="email" placeholder="" /> 
-                <label for="password">Password</label> 
-                <input class="form-styling" type="text" name="password" placeholder="" /> 
+                <label for="password">password</label> 
+                <input class="form-styling" type="text" name="password"  placeholder="" /> 
+                
 
-                <button type="submit" class="form-control button-form mt-4" style="background-color:#A06300 ;border-color:#212042; color:white" >SIGN UP</button>
+                <button type="submit" class="form-control button-form mt-4" style="background-color:#ffdda8 ;border-color:#000; border-radius:10px; color:#a06300" >SIGN UP</button>
             </form>
         </div>
 

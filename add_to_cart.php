@@ -9,18 +9,37 @@ $cart_id = "";
 $item_name = "";
 $item_price = "";
 $item_image = "";
+$minus = 0;
 echo json_encode($data);
-
 $conn = new PDO("mysql:host=localhost;dbname=enet888;charset=utf8","root","");
-$sql2 = "INSERT INTO cart (item_id,quantity,User_ID) VALUES ('$data[item_id]','$data[quantity]','$_SESSION[User_ID]')";
-$conn ->exec($sql2);
+$sql3 = "SELECT instock FROM item WHERE item_id=$data[item_id]";
+$result = $conn->query($sql3);
+$row=$result->fetch();
+    if($data['quantity']>$row[0]){
+        $data['quantity']=0;
+    }else {
+        $minus=$row[0]-$data['quantity'];
+    }
 
-$conn = new PDO("mysql:host=localhost;dbname=enet888;charset=utf8","root","");
-$sql = "SELECT cart_id FROM cart";
-$result = $conn->query($sql);
-while($row=$result->fetch()){
-    $cart_id = $row['cart_id'];
+    $conn = new PDO("mysql:host=localhost;dbname=enet888;charset=utf8","root","");
+    $sql4 = "UPDATE item SET instock=$minus WHERE item_id=$data[item_id]"; 
+    $pdoResult = $conn->prepare($sql4);
+    $pdoExec = $pdoResult->execute(array(":instock"=>$minus));
+    
+if($data['quantity']!=0){
+    $conn = new PDO("mysql:host=localhost;dbname=enet888;charset=utf8","root","");
+    $sql2 = "INSERT INTO cart (item_id,quantity,User_ID) VALUES ('$data[item_id]','$data[quantity]','$_SESSION[User_ID]')";
+    $conn ->exec($sql2);
+    
+    $conn = new PDO("mysql:host=localhost;dbname=enet888;charset=utf8","root","");
+    $sql = "SELECT cart_id FROM cart";
+    $result = $conn->query($sql);
+    while($row=$result->fetch()){
+        $cart_id = $row['cart_id'];
+    }
 }
+
+
 
 /*$conn = new PDO("mysql:host=localhost;dbname=enet888;charset=utf8","root","");
 $sql3 = "SELECT t1.item_id,t1.User_ID,t2.item_id,t2.item_name,t2.item_price,t2.item_image FROM cart as t1 INNER JOIN item as b1 ON (t1.item_id = b1.item_id) WHERE t1.item_id = b1.item_id";
