@@ -12,7 +12,7 @@
   <div class="navbar" style="background-color: #ffdda8 ;">
     <a class="nav-link nav-link-ltr" style="margin-left: 10%;" id="left" href="index.php"><font color=#a06300 ><i class="bi bi-house-door-fill"></i> EnET888</font></a>
     <a class="nav-link nav-link-ltr" style="margin-left: 47.5%;" id="center" href="cart.php"><font color=#a06300 ><i class="bi bi-cart-check"></i> Cart</font></a>
-    <a class="nav-link nav-link-ltr" style="margin-left: 85%;" id="center" href="profile.php"><font color=#a06300 ><i class="bi bi-person-lines-fill"></i>&nbsp;<?php echo $_SESSION["username"] ?> </font></a>
+    <a class="nav-link nav-link-ltr" style="margin-left: 83%;" id="center" href="profile.php"><font color=#a06300 ><i class="bi bi-person-lines-fill"></i>&nbsp;<?php echo $_SESSION["username"] ?> </font></a>
     <a class="nav-link nav-link-ltr" style="margin-left: 90%;" href="logout.php"><font color=#a06300 ><i class="bi bi-box-arrow-in-right"></i> logout</font></a>
   </div>
 <?php } ?>
