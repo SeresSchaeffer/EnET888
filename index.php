@@ -80,6 +80,7 @@ session_start();
     <!-- Featured End -->
 
     <!-- Products Start -->
+    
     <div class="container-fluid py-5">
         <div class="text-center mb-4">
             <h2 class="section-title px-5">
@@ -96,8 +97,15 @@ session_start();
                 <div class=" card-body border-left border-right text-center p-0 pt-4 pb-3 ">
                     <h6 class="text-truncate mb-3 ">กล่องสุ่มไซส์ XS</h6>
                     <div class="d-flex justify-content-center ">
-                        <h6>99.00 Bath</h6>
-                        <h6 class="text-muted ml-2 "><del>150.00 Bath</del></h6>
+                    <?php $conn = new PDO("mysql:host=localhost; dbname=enet888; charset=utf8","root","");
+                            $sql = "SELECT item_price,item_price_old,item_id FROM item  ";
+                            $result=$conn->query($sql);
+                            while($row=$result->fetch()){
+                                if($row['2'] =="1")
+                                    echo "<h6>".number_format($row['0'],2)." Baht</h6><h6 class='text-muted ml-2'><del>".number_format($row['1'],2)." Baht</del></h6>";    
+                            }
+                             $conn=null;
+                            ?>
                     </div>
                 </div>
                 <div class="card-footer d-flex justify-content-between border" style="background-color: #FFEFD5;">
@@ -112,8 +120,15 @@ session_start();
                 <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
                     <h6 class="text-truncate mb-3">กล่องสุ่มไซส์ S</h6>
                     <div class="d-flex justify-content-center">
-                        <h6>199.00 Bath</h6>
-                        <h6 class="text-muted ml-2"><del>250.00 Bath</del></h6>
+                    <?php $conn = new PDO("mysql:host=localhost; dbname=enet888; charset=utf8","root","");
+                            $sql = "SELECT item_price,item_price_old,item_id FROM item  ";
+                            $result=$conn->query($sql);
+                            while($row=$result->fetch()){
+                                if($row['2'] =="2")
+                                    echo "<h6>".number_format($row['0'],2)." Baht</h6><h6 class='text-muted ml-2'><del>".number_format($row['1'],2)." Baht</del></h6>";    
+                            }
+                             $conn=null;
+                            ?>
                     </div>
                 </div>
                 <div class="card-footer d-flex justify-content-between border" style="background-color: #FFEFD5;">
@@ -128,8 +143,15 @@ session_start();
                 <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
                     <h6 class="text-truncate mb-3">กล่องสุ่มไซส์ M</h6>
                     <div class="d-flex justify-content-center">
-                        <h6>1999.00 Bath</h6>
-                        <h6 class="text-muted ml-2"><del>2500.00 Bath</del></h6>
+                    <?php $conn = new PDO("mysql:host=localhost; dbname=enet888; charset=utf8","root","");
+                            $sql = "SELECT item_price,item_price_old,item_id FROM item  ";
+                            $result=$conn->query($sql);
+                            while($row=$result->fetch()){
+                                if($row['2'] =="3")
+                                    echo "<h6>".number_format($row['0'],2)." Baht</h6><h6 class='text-muted ml-2'><del>".number_format($row['1'],2)." Baht</del></h6>";    
+                            }
+                             $conn=null;
+                            ?>
                     </div>
                 </div>
                 <div class="card-footer d-flex justify-content-between border" style="background-color: #FFEFD5;">
@@ -144,8 +166,15 @@ session_start();
                 <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
                     <h6 class="text-truncate mb-3">กล่องสุ่มไซส์ L</h6>
                     <div class="d-flex justify-content-center">
-                        <h6>2999.00 Bath</h6>
-                        <h6 class="text-muted ml-2"><del>3500.00 Bath</del></h6>
+                    <?php $conn = new PDO("mysql:host=localhost; dbname=enet888; charset=utf8","root","");
+                            $sql = "SELECT item_price,item_price_old,item_id FROM item  ";
+                            $result=$conn->query($sql);
+                            while($row=$result->fetch()){
+                                if($row['2'] =="4")
+                                    echo "<h6>".number_format($row['0'],2)." Baht</h6><h6 class='text-muted ml-2'><del>".number_format($row['1'],2)." Baht</del></h6>";    
+                            }
+                             $conn=null;
+                            ?>
                     </div>
                 </div>
                 <div class="card-footer d-flex justify-content-between border" style="background-color: #FFEFD5;">
@@ -160,8 +189,15 @@ session_start();
                 <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
                     <h6 class="text-truncate mb-3">กล่องสุ่มไซส์ XL</h6>
                     <div class="d-flex justify-content-center">
-                        <h6>5999.00 Bath</h6>
-                        <h6 class="text-muted ml-2"><del>6500.00 Bath</del></h6>
+                    <?php $conn = new PDO("mysql:host=localhost; dbname=enet888; charset=utf8","root","");
+                            $sql = "SELECT item_price,item_price_old,item_id FROM item  ";
+                            $result=$conn->query($sql);
+                            while($row=$result->fetch()){
+                                if($row['2'] =="5")
+                                    echo "<h6>".number_format($row['0'],2)." Baht</h6><h6 class='text-muted ml-2'><del>".number_format($row['1'],2)." Baht</del></h6>";    
+                            }
+                             $conn=null;
+                            ?>
                     </div>
                 </div>
                 <div class="card-footer d-flex justify-content-between border" style="background-color: #FFEFD5;">
@@ -176,8 +212,15 @@ session_start();
                 <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
                     <h6 class="text-truncate mb-3">กล่องสุ่มไซส์ XXL</h6>
                     <div class="d-flex justify-content-center">
-                        <h6>9999.00 Bath</h6>
-                        <h6 class="text-muted ml-2"><del>15000.00 Bath</del></h6>
+                    <?php $conn = new PDO("mysql:host=localhost; dbname=enet888; charset=utf8","root","");
+                            $sql = "SELECT item_price,item_price_old,item_id FROM item  ";
+                            $result=$conn->query($sql);
+                            while($row=$result->fetch()){
+                                if($row['2'] =="6")
+                                    echo "<h6>".number_format($row['0'],2)." Baht</h6><h6 class='text-muted ml-2'><del>".number_format($row['1'],2)." Baht</del></h6>";    
+                            }
+                             $conn=null;
+                            ?>
                     </div>
                 </div>
                 <div class="card-footer d-flex justify-content-between border" style="background-color: #FFEFD5;">

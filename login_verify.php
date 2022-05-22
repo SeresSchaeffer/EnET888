@@ -16,7 +16,7 @@
         $_SESSION["password"]=$data["password"];  
         $_SESSION["User_ID"]=$data["User_ID"];
         $_SESSION["role"]=$data["role"];
-        header("location: profile.php");
+        header("location: index.php");
         die();
     }else{
         header("location: login.php");
