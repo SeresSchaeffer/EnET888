@@ -24,6 +24,7 @@ session_start();
     <link href="css/style.css" rel="stylesheet">
 
     <title>EnET 888</title>
+    
 </head>
 
 <body>
@@ -110,7 +111,7 @@ session_start();
                 </div>
                 <div class="card-footer d-flex justify-content-between border" style="background-color: #FFEFD5;">
                     <a href="xs.php" class="btn btn-sm text-dark p-0 "><i class="fas fa-eye text-primary mr-1 "></i>View Detail</a>
-                    <a href=" " class="btn btn-sm text-dark p-0 "><i class="fas fa-shopping-cart text-primary mr-1 "></i>Add To Cart</a>
+                   
                 </div>
             </div>
             <div class="card product-item border-0" style="background-color: #FFEFD5; padding-right: 50px;">
@@ -133,7 +134,7 @@ session_start();
                 </div>
                 <div class="card-footer d-flex justify-content-between border" style="background-color: #FFEFD5;">
                     <a href="s.php" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                    <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
+                   
                 </div>
             </div>
             <div class="card product-item border-0" style="background-color: #FFEFD5;">
@@ -156,7 +157,7 @@ session_start();
                 </div>
                 <div class="card-footer d-flex justify-content-between border" style="background-color: #FFEFD5;">
                     <a href="m.php" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                    <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
+                   
                 </div>
             </div>
             <div class="card product-item border-0" style="background-color: #FFEFD5; padding-right: 50px; padding-left: 165px;">
@@ -179,7 +180,7 @@ session_start();
                 </div>
                 <div class="card-footer d-flex justify-content-between border" style="background-color: #FFEFD5;">
                     <a href="l.php" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                    <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
+                   
                 </div>
             </div>
             <div class="card product-item border-0" style="background-color: #FFEFD5; padding-right: 50px;">
@@ -202,7 +203,7 @@ session_start();
                 </div>
                 <div class="card-footer d-flex justify-content-between border" style="background-color: #FFEFD5;">
                     <a href="xl.php" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                    <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
+                   
                 </div>
             </div>
             <div class="card product-item border-0" style="background-color: #FFEFD5;">
@@ -225,7 +226,7 @@ session_start();
                 </div>
                 <div class="card-footer d-flex justify-content-between border" style="background-color: #FFEFD5;">
                     <a href="xxl.php" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                    <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
+                   
                 </div>
             </div>
         </div>
