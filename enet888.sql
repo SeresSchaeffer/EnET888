@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 23, 2022 at 04:23 PM
+-- Generation Time: May 23, 2022 at 04:44 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.4.20
 
@@ -101,7 +101,8 @@ INSERT INTO `cart` (`cart_id`, `User_ID`, `item_id`, `quantity`, `checkout`) VAL
 (32, 3, 4, 4, 1),
 (37, 2, 3, 3, 2),
 (44, 3, 1, 5, 1),
-(52, 3, 1, 1, 0);
+(52, 3, 1, 1, 0),
+(53, 3, 2, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -125,7 +126,7 @@ CREATE TABLE `item` (
 
 INSERT INTO `item` (`item_id`, `item_name`, `item_price`, `item_price_old`, `instock`, `item_image`, `item_info`) VALUES
 (1, 'XS', 10, 100, 44, 'xsbox.jpg', 'เหลี่ยมทุกดอกแล้วบอกกล่องสุ่ม'),
-(2, 'S', 50, 500, 50, 'sbox.jpg', 'เหลี่ยมทุกดอกแล้วบอกกล่องสุ่ม'),
+(2, 'S', 50, 500, 49, 'sbox.jpg', 'เหลี่ยมทุกดอกแล้วบอกกล่องสุ่ม'),
 (3, 'M', 1000, 2000, 50, 'mbox.jpg', 'เหลี่ยมทุกดอกแล้วบอกกล่องสุ่ม'),
 (4, 'L', 2000, 3000, 47, 'lbox.jpg', 'เหลี่ยมทุกดอกแล้วบอกกล่องสุ่ม'),
 (5, 'XL', 5000, 6000, 50, 'xlbox.jpg', 'เหลี่ยมทุกดอกแล้วบอกกล่องสุ่ม'),
@@ -200,7 +201,9 @@ INSERT INTO `user` (`User_ID`, `username`, `password`, `name`, `surname`, `email
 (1, 'admin', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'admin', 'Somthong', 'admin@gmail.com', '1234567891234', 'ไม่บอกหรอก', '0966696247', '', 'a'),
 (2, 'flxke', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'Danaipong', 'Somthong', 'fluke.danaipong@gmail.com', 'fdfdsfdsfsd', '1634  JUSTIN HENDERSON NV 89011-4376 USA', '3270493274', '', 'm'),
 (3, 'new', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'Chanasorn', 'Somthong', 'new@gmail.com', '3231232132312', '35/2 หอพัก The North (ห้อง 203) ซ.วงศ์สว่าง 11 ถ.วงศ์สว่าง แขวงวงศ์สว่าง เขตบางซื่อ กทม 10800', '05555555', '', 'm'),
-(4, 'tar', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'Poramee', 'Somthong', 'tar@gmail.com', '', '1400  LODGEPOLE HENDERSON NV 89014-3017 USA', '09999999', '', 'm');
+(4, 'tar', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'Poramee', 'Somthong', 'tar@gmail.com', '', '1400  LODGEPOLE HENDERSON NV 89014-3017 USA', '09999999', '', 'm'),
+(5, 'lukwa', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', '', '', 'fluke.danaipong@gmail.com', '', '', '', '', 'm'),
+(6, 'pp', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', '', '', 'fluke.danaipong@gmail.com', '', '', '', '', 'm');
 
 --
 -- Indexes for dumped tables
@@ -244,7 +247,7 @@ ALTER TABLE `bank`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT for table `item`
@@ -256,7 +259,7 @@ ALTER TABLE `item`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `User_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `User_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
