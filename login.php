@@ -74,7 +74,7 @@
                 <label for="email">Email</label> 
                 <input class="form-styling" type="text" name="email" placeholder="" /> 
                 <label for="password">password</label> 
-                <input class="form-styling" type="text" name="password"  placeholder="" /> 
+                <input class="form-styling" type="password" name="password"  placeholder="" /> 
                 
 
                 <button type="submit" class="form-control button-form mt-4" style="background-color:#ffdda8 ;border-color:#000; border-radius:10px; color:#a06300" >SIGN UP</button>
